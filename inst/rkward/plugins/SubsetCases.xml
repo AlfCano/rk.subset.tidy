@@ -1,0 +1,86 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="SubsetCases.js" />
+	<help file="SubsetCases.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<convert id="is_range" sources="c1_slice_mode.string" mode="equals" standard="range" />
+		<convert id="is_head" sources="c1_slice_mode.string" mode="equals" standard="head" />
+		<convert id="is_tail" sources="c1_slice_mode.string" mode="equals" standard="tail" />
+		<convert id="is_samp" sources="c1_slice_mode.string" mode="equals" standard="sample" />
+		<convert id="op_not_isna" sources="c1_filter_op.string" mode="notequals" standard="is.na" />
+		<convert id="op_not_notna" sources="c1_filter_op.string" mode="notequals" standard="!is.na" />
+		<convert id="op_needs_val" sources="op_not_isna;op_not_notna" mode="and" />
+		<connect governor="c1_df.available" client="c1_sel.root" />
+		<connect governor="is_range.state" client="c1_range_frame.visible.enabled" />
+		<connect governor="is_head.state" client="c1_n_head.visible.enabled" />
+		<connect governor="is_tail.state" client="c1_n_tail.visible.enabled" />
+		<connect governor="is_samp.state" client="c1_n_samp.visible.enabled" />
+		<connect governor="op_needs_val.state" client="c1_filter_val.visible.enabled" />
+	</logic>
+	<dialog label="Subset Cases (Filter &amp; Slice)">
+		<row id="row_v11SD1FLFL">
+			<varselector id="c1_sel" />
+			<column id="clm_v1SD1FLFLB">
+				<varslot id="c1_df" label="Select Dataframe" source="c1_sel" classes="data.frame" required="true" />
+				<tabbook>
+					<tab label="Filter by Logic" id="tab_FltrbyLg">
+						<column id="clm_fBFBF1FV11">
+							<frame label="Basic Filter" id="frm_BascFltr">
+								<varslot id="c1_filter_var" label="Filter Variable" source="c1_sel" />
+								<dropdown id="c1_filter_op" label="Operator">
+									<option label="== (Equal to)" value="==" checked="true" />
+									<option label="!= (Not equal to)" value="!=" />
+									<option label="&lt; (Less than)" value="&lt;" />
+									<option label="&lt;= (Less or equal)" value="&lt;=" />
+									<option label="&gt; (Greater than)" value="&gt;" />
+									<option label="&gt;= (Greater or equal)" value="&gt;=" />
+									<option label="%in% (In group)" value="%in%" />
+									<option label="is.na() (Is missing)" value="is.na" />
+									<option label="!is.na() (Is not missing)" value="!is.na" />
+								</dropdown>
+								<input label="Value (Quote text, e.g., 'light' or c('A', 'B'))" id="c1_filter_val" />
+							</frame>
+							<input label="Advanced/Custom Filter (Overrides basic filter if used)" id="c1_filter_txt" size="large" />
+							<stretch />
+						</column>
+					</tab>
+					<tab label="Slice by Position" id="tab_SlcbyPst">
+						<column id="clm_d1SMNRTRBR">
+							<dropdown id="c1_slice_mode" label="Slicing Method">
+								<option label="None" value="none" checked="true" />
+								<option label="Range (slice)" value="range" />
+								<option label="Top Rows (slice_head)" value="head" />
+								<option label="Bottom Rows (slice_tail)" value="tail" />
+								<option label="Random Sample (slice_sample)" value="sample" />
+							</dropdown>
+							<frame label="Row Range" id="c1_range_frame">
+								<row id="row_sF111T1101">
+									<spinbox label="From row" id="c1_range_from" initial="1" min="1" type="integer" />
+									<spinbox label="To row" id="c1_range_to" initial="10" min="1" type="integer" />
+								</row>
+							</frame>
+							<spinbox label="Number of rows (n)" id="c1_n_head" initial="5" min="1" type="integer" />
+							<spinbox label="Number of rows (n)" id="c1_n_tail" initial="5" min="1" type="integer" />
+							<spinbox label="Number of random rows (n)" id="c1_n_samp" initial="5" min="1" type="integer" />
+							<stretch />
+						</column>
+					</tab>
+					<tab label="Output" id="tab_Output">
+						<column id="clm_svbjctS1PP">
+							<saveobject label="Save subset as" checkable="true" checked="true" initial="subset_data" id="c1_save" />
+							<preview label="Preview" id="prv_Preview" mode="data" />
+						</column>
+					</tab>
+				</tabbook>
+			</column>
+		</row>
+	</dialog>
+</document>

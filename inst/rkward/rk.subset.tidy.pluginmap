@@ -1,0 +1,97 @@
+<!DOCTYPE
+	rkpluginmap
+>
+<document
+	base_prefix=""
+	namespace="SubsetCases"
+	id="SubsetCases_rkward"
+	po_id="SubsetCases_rkward"
+	priority="medium"
+>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<about
+		name="rk.subset.tidy"
+		shortinfo="An RKWard GUI plugin for subsetting cases and variables using dplyr (filter, slice, select, arrange)."
+		longinfo="An RKWard GUI plugin for subsetting cases and variables using dplyr (filter, slice, select, arrange)."
+		version="0.0.1"
+		releasedate="2026-09-16"
+		url="https://github.com/AlfCano/rk.subset.tidy"
+		license="GPL (&gt;= 3)"
+	>
+		<author
+			given="Alfonso"
+			family="Cano"
+			email="alfonso.cano@correo.buap.mx"
+			role="aut, cre"
+		/>
+	</about>
+	<require
+		map="rkward::menu"
+	/>
+	<require
+		map="rkward::embedded"
+	/>
+	<components>
+		<component
+			id="cmp_SubsetCasesSelectArrange"
+			label="Select &amp; Arrange"
+			type="standard"
+			file="plugins/SelectArrange.xml"
+		>
+		</component>
+		<component
+			id="cmp_SubsetCasesSubsetCases"
+			label="Subset Cases"
+			type="standard"
+			file="plugins/SubsetCases.xml"
+		>
+		</component>
+	</components>
+	<hierarchy>
+		<menu
+			id="data"
+			label="Data"
+		>
+			<menu
+				id="DataTransformationdplyr"
+				label="Data Transformation (dplyr)"
+			>
+				<entry
+					component="cmp_SubsetCasesSelectArrange"
+				/>
+			</menu>
+		</menu>
+		<menu
+			id="data"
+			label="Data"
+		>
+			<menu
+				id="DataTransformationdplyr"
+				label="Data Transformation (dplyr)"
+			>
+				<entry
+					component="cmp_SubsetCasesSubsetCases"
+				/>
+			</menu>
+		</menu>
+	</hierarchy>
+	<!--
+		<context
+			id="x11"
+		>
+		</context>
+	-->
+	<!--
+		<context
+			id="import"
+		>
+		</context>
+	-->
+</document>

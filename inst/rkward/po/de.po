@@ -1,0 +1,131 @@
+msgid "Subset Cases"
+msgstr "Fälle Filtern (Zeilen)"
+
+msgid "Filter rows based on logical conditions or slice them by position."
+msgstr "Filtern Sie Zeilen basierend auf logischen Bedingungen oder schneiden Sie sie nach Position ab."
+
+msgid "Logical Filter Expression (e.g., skin_color == 'light' & height > 150)"
+msgstr "Logischer Filterausdruck (z. B., skin_color == 'light' & height > 150)"
+
+msgid "Slicing Method"
+msgstr "Schneidemethode"
+
+msgid "None"
+msgstr "Keine"
+
+msgid "Range (slice)"
+msgstr "Bereich (slice)"
+
+msgid "Top Rows (slice_head)"
+msgstr "Erste Zeilen (slice_head)"
+
+msgid "Bottom Rows (slice_tail)"
+msgstr "Letzte Zeilen (slice_tail)"
+
+msgid "Random Sample (slice_sample)"
+msgstr "Zufallsstichprobe (slice_sample)"
+
+msgid "Row Range"
+msgstr "Zeilenbereich"
+
+msgid "From row"
+msgstr "Von Zeile"
+
+msgid "To row"
+msgstr "Bis Zeile"
+
+msgid "Number of rows (n)"
+msgstr "Anzahl der Zeilen (n)"
+
+msgid "Number of random rows (n)"
+msgstr "Anzahl zufälliger Zeilen (n)"
+
+msgid "Save subset as"
+msgstr "Teilmenge speichern unter"
+
+msgid "Subset Cases (Filter & Slice)"
+msgstr "Fälle Filtern (Filtern & Schneiden)"
+
+msgid "Filter by Logic"
+msgstr "Nach Logik Filtern"
+
+msgid "Keep rows that match a condition:"
+msgstr "Behalte Zeilen, die eine Bedingung erfüllen:"
+
+msgid "Slice by Position"
+msgstr "Nach Position Schneiden"
+
+msgid "Select Variables & Arrange"
+msgstr "Variablen Auswählen & Sortieren"
+
+msgid "Select or drop columns, and sort rows by variables."
+msgstr "Wählen oder entfernen Sie Spalten und sortieren Sie Zeilen nach Variablen."
+
+msgid "Variables to Keep"
+msgstr "Zu behaltende Variablen"
+
+msgid "Variables to Drop"
+msgstr "Zu entfernende Variablen"
+
+msgid "Advanced Select (e.g., starts_with('hair') | hair_color:eye_color)"
+msgstr "Erweiterte Auswahl (z. B., starts_with('hair') | hair_color:eye_color)"
+
+msgid "Sort rows by:"
+msgstr "Zeilen sortieren nach:"
+
+msgid "Descending order (desc)"
+msgstr "Absteigende Reihenfolge (desc)"
+
+msgid "Save sorted/selected data as"
+msgstr "Sortierte/ausgewählte Daten speichern unter"
+
+msgid "Select & Arrange"
+msgstr "Auswählen & Sortieren"
+
+msgid "Select Columns"
+msgstr "Spalten Auswählen"
+
+msgid "Arrange Rows"
+msgstr "Zeilen Sortieren"
+
+msgid "Basic Filter"
+msgstr "Basisfilter"
+
+msgid "Filter Variable"
+msgstr "Filtervariable"
+
+msgid "Operator"
+msgstr "Operator"
+
+msgid "Value (Quote text, e.g., 'light' or c('A', 'B'))"
+msgstr "Wert (Text in Anführungszeichen, z.B. 'light' oder c('A', 'B'))"
+
+msgid "Advanced/Custom Filter (Overrides basic filter if used)"
+msgstr "Erweiterter/Benutzerdefinierter Filter (Überschreibt Basisfilter, wenn verwendet)"
+
+msgid "== (Equal to)"
+msgstr "== (Gleich)"
+
+msgid "!= (Not equal to)"
+msgstr "!= (Ungleich)"
+
+msgid "< (Less than)"
+msgstr "< (Kleiner als)"
+
+msgid "<= (Less or equal)"
+msgstr "<= (Kleiner oder gleich)"
+
+msgid "> (Greater than)"
+msgstr "> (Größer als)"
+
+msgid ">= (Greater or equal)"
+msgstr ">= (Größer oder gleich)"
+
+msgid "%in% (In group)"
+msgstr "%in% (In Gruppe)"
+
+msgid "is.na() (Is missing)"
+msgstr "is.na() (Ist fehlend/NA)"
+
+msgid "!is.na() (Is not missing)"
+msgstr "!is.na() (Ist nicht fehlend/NA)"

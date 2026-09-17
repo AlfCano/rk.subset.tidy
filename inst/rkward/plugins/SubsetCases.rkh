@@ -1,0 +1,61 @@
+<!DOCTYPE rkhelp >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<title>
+		Subset Cases
+	</title>
+	<summary>
+	</summary>
+	<usage>
+	</usage>
+	<!--
+		<section id="sct_EDITORDE" title="EDIT OR DELETE ME">
+			EDIT OR DELETE ME
+		</section>
+	-->
+	<settings>
+		<setting id="c1_df">
+		</setting>
+		<caption id="tab_FltrbyLg" />
+		<caption id="frm_BascFltr" />
+		<setting id="c1_filter_var">
+		</setting>
+		<setting id="c1_filter_op">
+		</setting>
+		<setting id="c1_filter_val">
+		</setting>
+		<setting id="c1_filter_txt">
+		</setting>
+		<caption id="tab_SlcbyPst" />
+		<setting id="c1_slice_mode">
+		</setting>
+		<caption id="c1_range_frame" />
+		<setting id="c1_range_from">
+		</setting>
+		<setting id="c1_range_to">
+		</setting>
+		<setting id="c1_n_head">
+		</setting>
+		<setting id="c1_n_tail">
+		</setting>
+		<setting id="c1_n_samp">
+		</setting>
+		<caption id="tab_Output" />
+		<setting id="c1_save">
+		</setting>
+	</settings>
+	<!--
+		<related>
+			<ul>
+				<li>
+					<link href="rkward://rhelp/..." />
+				</li>
+			</ul>
+		</related>
+	-->
+	<technical>
+	</technical>
+</document>

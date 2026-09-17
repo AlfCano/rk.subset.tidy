@@ -1,0 +1,47 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="SelectArrange.js" />
+	<help file="SelectArrange.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<connect governor="c2_df.available" client="c2_sel.root" />
+	</logic>
+	<dialog label="Select &amp; Arrange">
+		<row id="row_v22SD2SCSC">
+			<varselector id="c2_sel" />
+			<column id="clm_v2SD2SCSC2">
+				<varslot id="c2_df" label="Select Dataframe" source="c2_sel" classes="data.frame" required="true" />
+				<tabbook>
+					<tab label="Select Columns" id="tab_SlctClmn">
+						<column id="clm_v2VK22VD2A">
+							<varslot id="c2_keep" label="Variables to Keep" source="c2_sel" multi="true" />
+							<varslot id="c2_drop" label="Variables to Drop" source="c2_sel" multi="true" />
+							<input label="Advanced Select (e.g., starts_with('hair') | hair_color:eye_color)" id="c2_adv" />
+							<stretch />
+						</column>
+					</tab>
+					<tab label="Arrange Rows" id="tab_ArrngRws">
+						<column id="clm_vrsl2S22D1">
+							<varslot id="c2_sort" label="Sort rows by:" source="c2_sel" multi="true" />
+							<checkbox id="c2_desc" label="Descending order (desc)" value="1" />
+							<stretch />
+						</column>
+					</tab>
+					<tab label="Output" id="tab_Output">
+						<column id="clm_svbjctS2PP">
+							<saveobject label="Save sorted/selected data as" checkable="true" checked="true" initial="tidy_data" id="c2_save" />
+							<preview label="Preview" id="prv_Preview" mode="data" />
+						</column>
+					</tab>
+				</tabbook>
+			</column>
+		</row>
+	</dialog>
+</document>

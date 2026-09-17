@@ -1,0 +1,49 @@
+<!DOCTYPE rkhelp >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<title>
+		Select &amp; Arrange
+	</title>
+	<summary>
+	</summary>
+	<usage>
+	</usage>
+	<!--
+		<section id="sct_EDITORDE" title="EDIT OR DELETE ME">
+			EDIT OR DELETE ME
+		</section>
+	-->
+	<settings>
+		<setting id="c2_df">
+		</setting>
+		<caption id="tab_SlctClmn" />
+		<setting id="c2_keep">
+		</setting>
+		<setting id="c2_drop">
+		</setting>
+		<setting id="c2_adv">
+		</setting>
+		<caption id="tab_ArrngRws" />
+		<setting id="c2_sort">
+		</setting>
+		<setting id="c2_desc">
+		</setting>
+		<caption id="tab_Output" />
+		<setting id="c2_save">
+		</setting>
+	</settings>
+	<!--
+		<related>
+			<ul>
+				<li>
+					<link href="rkward://rhelp/..." />
+				</li>
+			</ul>
+		</related>
+	-->
+	<technical>
+	</technical>
+</document>
